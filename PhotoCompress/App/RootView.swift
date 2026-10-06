@@ -1,9 +1,9 @@
 import SwiftUI
 
-/// Placeholder shell. Phase 0 is engine-only; the Picker -> Compose -> Results flow comes next.
+/// Phase 0 shell: hosts the engine test harness. Replaced by the Picker -> Compose -> Results flow.
 struct RootView: View {
     var body: some View {
-        Text("app.title")
+        CompressHarnessView()
     }
 }
 
