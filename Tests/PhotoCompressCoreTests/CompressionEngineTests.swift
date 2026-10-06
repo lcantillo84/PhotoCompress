@@ -38,6 +38,25 @@ final class CompressionEngineTests: XCTestCase {
         XCTAssertEqual(props[kCGImagePropertyOrientation] as? Int, 6)
     }
 
+    /// iPhone photos are HEIC in Display P3. Output is JPEG; EXIF must survive and color space must stay wide-gamut.
+    func testHEICDisplayP3Source() throws {
+        let heic = FileManager.default.temporaryDirectory.appendingPathComponent("pc-\(UUID().uuidString).heic")
+        defer { try? FileManager.default.removeItem(at: heic) }
+        try Self.makeSamplePhoto(at: heic, width: 4032, height: 3024, type: .heic, colorSpaceName: CGColorSpace.displayP3)
+
+        let result = try CompressionEngine.compress(sourceURL: heic, targetBytes: 500_000)
+        let props = try properties(of: result.data)
+        let exif = props[kCGImagePropertyExifDictionary] as? [CFString: Any]
+        let tiff = props[kCGImagePropertyTIFFDictionary] as? [CFString: Any]
+        print("[HEIC P3] original \(result.originalBytes) B | final \(result.finalBytes) B | quality \(result.quality) | scale \(result.scale) | profile \(props[kCGImagePropertyProfileName] ?? "none")")
+
+        XCTAssertLessThanOrEqual(result.finalBytes, 500_000)
+        XCTAssertEqual(exif?[kCGImagePropertyExifDateTimeOriginal] as? String, Self.captureDate)
+        XCTAssertEqual(tiff?[kCGImagePropertyTIFFModel] as? String, Self.cameraModel)
+        XCTAssertEqual(props[kCGImagePropertyOrientation] as? Int, 6)
+        XCTAssertTrue((props[kCGImagePropertyProfileName] as? String)?.contains("P3") == true, "color profile lost")
+    }
+
     func testUnreadableSourceThrows() {
         let bogus = FileManager.default.temporaryDirectory.appendingPathComponent("nope.jpg")
         XCTAssertThrowsError(try CompressionEngine.compress(sourceURL: bogus, targetBytes: 1000)) {
@@ -78,7 +97,10 @@ final class CompressionEngineTests: XCTestCase {
     }
 
     /// Photo-like synthetic image: smooth gradients and patterns plus mild noise, with EXIF.
-    static func makeSamplePhoto(at url: URL, width: Int, height: Int) throws {
+    static func makeSamplePhoto(
+        at url: URL, width: Int, height: Int,
+        type: UTType = .jpeg, colorSpaceName: CFString = CGColorSpace.sRGB
+    ) throws {
         var pixels = [UInt8](repeating: 255, count: width * height * 4)
         var rng = SystemRandomNumberGenerator()
         for y in 0..<height {
@@ -96,7 +118,7 @@ final class CompressionEngineTests: XCTestCase {
         let image: CGImage = pixels.withUnsafeMutableBytes { raw in
             let ctx = CGContext(
                 data: raw.baseAddress, width: width, height: height, bitsPerComponent: 8,
-                bytesPerRow: width * 4, space: CGColorSpace(name: CGColorSpace.sRGB)!,
+                bytesPerRow: width * 4, space: CGColorSpace(name: colorSpaceName)!,
                 bitmapInfo: CGImageAlphaInfo.noneSkipLast.rawValue)!
             return ctx.makeImage()!
         }
@@ -115,7 +137,7 @@ final class CompressionEngineTests: XCTestCase {
             ],
             kCGImageDestinationLossyCompressionQuality: 0.95,
         ]
-        let dest = CGImageDestinationCreateWithURL(url as CFURL, UTType.jpeg.identifier as CFString, 1, nil)!
+        let dest = CGImageDestinationCreateWithURL(url as CFURL, type.identifier as CFString, 1, nil)!
         CGImageDestinationAddImage(dest, image, props as CFDictionary)
         precondition(CGImageDestinationFinalize(dest))
     }
