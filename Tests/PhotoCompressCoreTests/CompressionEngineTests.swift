@@ -57,6 +57,40 @@ final class CompressionEngineTests: XCTestCase {
         XCTAssertTrue((props[kCGImagePropertyProfileName] as? String)?.contains("P3") == true, "color profile lost")
     }
 
+    /// Real photos from Tests/Fixtures (git-ignored; skipped if absent). For each source we check
+    /// that whatever EXIF it had survives, and report how much of the budget was used.
+    func testRealPhotoFixtures() throws {
+        let dir = URL(fileURLWithPath: #filePath).deletingLastPathComponent().deletingLastPathComponent()
+            .appendingPathComponent("Fixtures")
+        let files = (try? FileManager.default.contentsOfDirectory(at: dir, includingPropertiesForKeys: nil)) ?? []
+        let photos = files.filter { ["heic", "jpg", "jpeg"].contains($0.pathExtension.lowercased()) }
+        try XCTSkipIf(photos.isEmpty, "no fixtures in Tests/Fixtures")
+
+        for url in photos.sorted(by: { $0.lastPathComponent < $1.lastPathComponent }) {
+            let source = try properties(of: Data(contentsOf: url))
+            for target in [500_000, 2_000_000] {
+                let result = try CompressionEngine.compress(sourceURL: url, targetBytes: target)
+                let out = try properties(of: result.data)
+                let fill = Double(result.finalBytes) / Double(target)
+                print("[fixture \(url.lastPathComponent)] target \(target) B | original \(result.originalBytes) B | final \(result.finalBytes) B (\(String(format: "%.1f", fill * 100))%) | quality \(result.quality) | scale \(String(format: "%.3f", result.scale)) | encodes \(result.iterations)")
+
+                XCTAssertLessThanOrEqual(result.finalBytes, target, url.lastPathComponent)
+                if result.originalBytes > target { XCTAssertGreaterThan(fill, 0.75, "under-filled: \(url.lastPathComponent)") }
+
+                let srcExif = source[kCGImagePropertyExifDictionary] as? [CFString: Any]
+                let outExif = out[kCGImagePropertyExifDictionary] as? [CFString: Any]
+                XCTAssertEqual(outExif?[kCGImagePropertyExifDateTimeOriginal] as? String,
+                               srcExif?[kCGImagePropertyExifDateTimeOriginal] as? String, "capture date")
+                let srcTiff = source[kCGImagePropertyTIFFDictionary] as? [CFString: Any]
+                let outTiff = out[kCGImagePropertyTIFFDictionary] as? [CFString: Any]
+                XCTAssertEqual(outTiff?[kCGImagePropertyTIFFModel] as? String,
+                               srcTiff?[kCGImagePropertyTIFFModel] as? String, "camera model")
+                XCTAssertEqual(out[kCGImagePropertyOrientation] as? Int, source[kCGImagePropertyOrientation] as? Int, "orientation")
+                XCTAssertEqual(out[kCGImagePropertyGPSDictionary] != nil, source[kCGImagePropertyGPSDictionary] != nil, "GPS")
+            }
+        }
+    }
+
     func testUnreadableSourceThrows() {
         let bogus = FileManager.default.temporaryDirectory.appendingPathComponent("nope.jpg")
         XCTAssertThrowsError(try CompressionEngine.compress(sourceURL: bogus, targetBytes: 1000)) {
