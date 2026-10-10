@@ -1,52 +1,69 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "CFBundleDisplayName" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photo Compress"
+  "sourceLanguage": "en",
+  "strings": {
+    "CFBundleDisplayName": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo Compress"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comprimir Fotos"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimir Fotos"
           }
         }
       }
     },
-    "CFBundleName" : {
-      "comment" : "Bundle name",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "PhotoCompress"
+    "CFBundleName": {
+      "comment": "Bundle name",
+      "extractionState": "extracted_with_value",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "PhotoCompress"
           }
         }
       }
     },
-    "NSPhotoLibraryAddUsageDescription" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Photo Compress saves the compressed copies to your library. It never changes or deletes your originals."
+    "NSPhotoLibraryAddUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo Compress saves the compressed copies to a “Photo Compress” album in your library. It never changes or deletes your photos."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comprimir Fotos guarda las copias comprimidas en tu biblioteca. Nunca cambia ni borra tus originales."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimir Fotos guarda las copias comprimidas en un álbum “Photo Compress” en tu biblioteca. Nunca cambia ni borra tus fotos."
+          }
+        }
+      }
+    },
+    "NSPhotoLibraryUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo Compress saves the compressed copies to a “Photo Compress” album in your library. It never changes or deletes your photos."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimir Fotos guarda las copias comprimidas en un álbum “Photo Compress” en tu biblioteca. Nunca cambia ni borra tus fotos."
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

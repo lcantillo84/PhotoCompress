@@ -23,10 +23,21 @@
 		B17E032E538A97235CDC496B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DB32B493B701964BB15B6662 /* PrivacyInfo.xcprivacy */; };
 		B49D4E2B76D7F2A769174C49 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068966CE2FEF50D5AFB4A87 /* ItemRow.swift */; };
 		B54F9EC52E4A0104EE95FA96 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83222B735966970072A9C3C0 /* Thumbnail.swift */; };
+		D1928A8774DD02E5FD11E630 /* PhotoCompressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CC4F8BAAE320BB319A460F /* PhotoCompressUITests.swift */; };
 		D201A128638D68236BED56FA /* PhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C0A0C54CA1EA4BFE691FA /* PhotoSaver.swift */; };
 		D5D66FB52427B4DF947FB538 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B501FFAA162FFD171FBA9 /* SettingsView.swift */; };
 		E5B2F4D117EB68FC08A0431D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 409F4785A5F052D5E023CC64 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		23008FCD1D377BE4655838E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E95522ECA56A551F490AE015 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E738CCCDEA07F0B3D15205A0;
+			remoteInfo = PhotoCompress;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		122072B1E14B3B784AF34809 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -35,10 +46,12 @@
 		2F0829F2C43611C24F2736D5 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		391C9C5A9BF133CCFE6D400B /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
 		409F4785A5F052D5E023CC64 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		40CC4F8BAAE320BB319A460F /* PhotoCompressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCompressUITests.swift; sourceTree = "<group>"; };
 		77C50C5CED629B25ACA396BB /* CompressionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionEngine.swift; sourceTree = "<group>"; };
 		7851D6B12C0EE44C1B30B582 /* BatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchModel.swift; sourceTree = "<group>"; };
 		83222B735966970072A9C3C0 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		87A201EB819FD0401239B108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8D2E76B4F990181321D2E860 /* PhotoCompressUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PhotoCompressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		988ED94EB5337EB1273EF936 /* PhotoCompressApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCompressApp.swift; sourceTree = "<group>"; };
 		9AF7DCE01C5F20633D73C9D2 /* BatchProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchProgressView.swift; sourceTree = "<group>"; };
 		A1F763E399FF56AE67BDCDAA /* BatchJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchJournal.swift; sourceTree = "<group>"; };
@@ -56,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				D3E4FCA3E71D120D154460D6 /* PhotoCompress.app */,
+				8D2E76B4F990181321D2E860 /* PhotoCompressUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				87687C552AD393BBF4E3D244 /* PhotoCompress */,
+				7283F2992CB9188DC162B77B /* UITests */,
 				06F191B842CBC2CCDFFD18B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +100,14 @@
 				391C9C5A9BF133CCFE6D400B /* ComposeView.swift */,
 			);
 			path = Compose;
+			sourceTree = "<group>";
+		};
+		7283F2992CB9188DC162B77B /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				40CC4F8BAAE320BB319A460F /* PhotoCompressUITests.swift */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 		87687C552AD393BBF4E3D244 /* PhotoCompress */ = {
@@ -145,6 +168,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		61C7282E2810B6591F3C5C99 /* PhotoCompressUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 252457BA2A4E7F498C2917E8 /* Build configuration list for PBXNativeTarget "PhotoCompressUITests" */;
+			buildPhases = (
+				56F6C78AD4864D52A682E619 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23DE025A021B81E3343D8351 /* PBXTargetDependency */,
+			);
+			name = PhotoCompressUITests;
+			packageProductDependencies = (
+			);
+			productName = PhotoCompressUITests;
+			productReference = 8D2E76B4F990181321D2E860 /* PhotoCompressUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E738CCCDEA07F0B3D15205A0 /* PhotoCompress */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 379675183579433A1ADACB84 /* Build configuration list for PBXNativeTarget "PhotoCompress" */;
@@ -172,6 +213,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					61C7282E2810B6591F3C5C99 = {
+						DevelopmentTeam = C73JU9CH26;
+						TestTargetID = E738CCCDEA07F0B3D15205A0;
+					};
 					E738CCCDEA07F0B3D15205A0 = {
 						DevelopmentTeam = C73JU9CH26;
 					};
@@ -193,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				E738CCCDEA07F0B3D15205A0 /* PhotoCompress */,
+				61C7282E2810B6591F3C5C99 /* PhotoCompressUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +257,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		56F6C78AD4864D52A682E619 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1928A8774DD02E5FD11E630 /* PhotoCompressUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E3B9A1BAF1CE49CACC914CCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +290,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		23DE025A021B81E3343D8351 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E738CCCDEA07F0B3D15205A0 /* PhotoCompress */;
+			targetProxy = 23008FCD1D377BE4655838E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		6118A516870E1321C948246F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -244,7 +306,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Compress";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Photo Compress saves the compressed copies to your library. It never changes or deletes your originals.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Photo Compress saves the compressed copies to a “Photo Compress” album in your library. It never changes or deletes your photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Compress saves the compressed copies to a “Photo Compress” album in your library. It never changes or deletes your photos.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -327,6 +390,40 @@
 			};
 			name = Debug;
 		};
+		A692174E9BB613098C14340C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liliannesperry.photocompress20261608.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhotoCompress;
+			};
+			name = Debug;
+		};
+		CBC3E1B792C7CEF0D84DD404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.liliannesperry.photocompress20261608.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhotoCompress;
+			};
+			name = Release;
+		};
 		EE7DB5ECAE78FA6A0BB1019D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,7 +490,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Compress";
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Photo Compress saves the compressed copies to your library. It never changes or deletes your originals.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Photo Compress saves the compressed copies to a “Photo Compress” album in your library. It never changes or deletes your photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Compress saves the compressed copies to a “Photo Compress” album in your library. It never changes or deletes your photos.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -413,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		252457BA2A4E7F498C2917E8 /* Build configuration list for PBXNativeTarget "PhotoCompressUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A692174E9BB613098C14340C /* Debug */,
+				CBC3E1B792C7CEF0D84DD404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		379675183579433A1ADACB84 /* Build configuration list for PBXNativeTarget "PhotoCompress" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

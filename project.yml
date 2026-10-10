@@ -15,6 +15,8 @@ targets:
   PhotoCompress:
     type: application
     platform: iOS
+    scheme:
+      testTargets: [PhotoCompressUITests]
     sources:
       - path: PhotoCompress
         excludes: ["**/.gitkeep"]
@@ -24,10 +26,22 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_CFBundleDisplayName: Photo Compress
-        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: Photo Compress saves the compressed copies to your library. It never changes or deletes your originals.
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: Photo Compress saves the compressed copies to a “Photo Compress” album in your library. It never changes or deletes your photos.
+        INFOPLIST_KEY_NSPhotoLibraryUsageDescription: Photo Compress saves the compressed copies to a “Photo Compress” album in your library. It never changes or deletes your photos.
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
         TARGETED_DEVICE_FAMILY: "1"
         SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
         SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD: NO
         LOCALIZATION_PREFERS_STRING_CATALOGS: YES
         SWIFT_EMIT_LOC_STRINGS: YES
+  PhotoCompressUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources: [UITests]
+    dependencies:
+      - target: PhotoCompress
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.liliannesperry.photocompress20261608.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: PhotoCompress

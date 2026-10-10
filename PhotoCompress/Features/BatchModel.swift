@@ -177,7 +177,7 @@ final class BatchModel {
             }
             let output = store.outbox.appendingPathComponent(file)
             try result.data.write(to: output, options: .atomic)
-            try await PhotoSaver.save(fileURL: output)
+            try PhotoSaver.save(fileURL: output)
             return .saved(bytes: result.finalBytes, file: file)
         } catch {
             return .failed

@@ -30,10 +30,11 @@ that says where the photos went. Leave out: ads, rating prompts, video, cropping
 
 - `PhotoCompress/App` entry point + root view, `Localizable.xcstrings`
 - `PhotoCompress/Features` UI: `BatchModel` drives Home -> Compose -> Progress -> Results
-- `Core/BatchJournal.swift` per-photo journal for resume; `Core/PhotoSaver.swift` add-only save (not in the SwiftPM target)
+- `Core/BatchJournal.swift` per-photo journal for resume; `Core/PhotoSaver.swift` saves new assets into a "Photo Compress" album; needs full library access because add-only can't use albums (user's choice, Oct 2026). Not in the SwiftPM target
 - `PhotoCompress/Core` engine; no UIKit imports, so it is testable from the CLI
 - `PhotoCompress/PrivacyInfo.xcprivacy` privacy manifest; keep in sync with any new required-reason API use
 - `Tests/PhotoCompressCoreTests` engine + journal tests; run `swift test`. `Tests/Fixtures` holds real photos and is git-ignored
+- `UITests` end-to-end UI test on the fixtures: `xcodebuild -scheme PhotoCompress -destination 'platform=iOS Simulator,...' test`
 - `project.yml` is the source of the Xcode project; run `xcodegen generate` after adding files
 - Debug builds accept `-demo compose|running|results|unfinished` for screenshots
 

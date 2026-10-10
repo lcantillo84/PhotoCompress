@@ -497,13 +497,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Photo Compress needs permission to add the compressed copies to your library. It can't see, change or delete your other photos."
+            "value": "Photo Compress needs access to your library to save the compressed copies in their own album. It never changes or deletes your photos."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Comprimir Fotos necesita permiso para agregar las copias comprimidas a tu biblioteca. No puede ver, cambiar ni borrar tus otras fotos."
+            "value": "Comprimir Fotos necesita acceso a tu biblioteca para guardar las copias comprimidas en su propio álbum. Nunca cambia ni borra tus fotos."
           }
         }
       }
@@ -793,13 +793,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "New copies are in Photos, under Recents, with “compressed” in the name. Your originals were not changed."
+            "value": "New copies are in the “Photo Compress” album in Photos, with “compressed” in the name. Your originals were not changed."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Las copias nuevas están en Fotos, en Recientes, con “compressed” en el nombre. Tus originales no se tocaron."
+            "value": "Las copias nuevas están en el álbum “Photo Compress” de Fotos, con “compressed” en el nombre. Tus originales no se tocaron."
           }
         }
       }
@@ -1099,13 +1099,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "This is the new copy saved to Photos. Your original is unchanged."
+            "value": "This is the new copy saved to the “Photo Compress” album. Your original is unchanged."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Esta es la copia nueva guardada en Fotos. Tu original no cambió."
+            "value": "Esta es la copia nueva guardada en el álbum “Photo Compress”. Tu original no cambió."
           }
         }
       }
