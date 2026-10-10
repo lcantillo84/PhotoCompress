@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ResultsView: View {
     let model: BatchModel
+    @State private var previewed: BatchJournal.Item?
 
     var body: some View {
         if let batch = model.journal {
@@ -24,10 +25,16 @@ struct ResultsView: View {
 
                 if !saved.isEmpty { whereCard }
 
+                if !saved.isEmpty {
+                    Text("results.tapHint").font(.footnote).foregroundStyle(.secondary)
+                }
                 ScrollView {
                     LazyVStack(spacing: 0) {
                         ForEach(batch.items) { item in
-                            ItemRow(item: item, store: model.store) { model.retry(item.id) }
+                            ItemRow(
+                                item: item, store: model.store,
+                                retry: { model.retry(item.id) },
+                                open: item.status == .saved ? { previewed = item } : nil)
                             Divider()
                         }
                     }
@@ -42,6 +49,14 @@ struct ResultsView: View {
             .background(Color.ground)
             .swipeBack { model.discard() }
             .navigationTitle("results.nav")
+            .sheet(item: $previewed) { item in
+                CompressedPreview(item: item, store: model.store)
+            }
+            #if DEBUG
+            .task {
+                if UserDefaults.standard.bool(forKey: "demoPreview") { previewed = saved.first }
+            }
+            #endif
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button { model.discard() } label: { Label("nav.home", systemImage: "chevron.left").labelStyle(.titleAndIcon) }
@@ -69,5 +84,52 @@ struct ResultsView: View {
         }
         .padding(16)
         .card()
+    }
+}
+
+/// Shows one compressed copy full-size, so the user can check it without hunting in Photos.
+struct CompressedPreview: View {
+    let item: BatchJournal.Item
+    let store: BatchStore
+    @Environment(\.dismiss) private var dismiss
+
+    private var url: URL { store.outbox.appendingPathComponent(item.outputFile ?? "") }
+
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 16) {
+                Group {
+                    if let image = UIImage(contentsOfFile: url.path) {
+                        Image(uiImage: image).resizable().scaledToFit()
+                    } else {
+                        Color(.tertiarySystemFill)
+                    }
+                }
+                .clipShape(.rect(cornerRadius: 12))
+                .frame(maxHeight: .infinity)
+
+                VStack(spacing: 4) {
+                    Text("preview.compressed").font(.headline)
+                    Text(verbatim: "\(item.originalBytes.fileSize) → \((item.finalBytes ?? 0).fileSize)")
+                        .font(.title3.weight(.semibold)).foregroundStyle(Color.success)
+                    Text(verbatim: url.lastPathComponent).font(.footnote).foregroundStyle(.secondary)
+                    Text("preview.note").font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
+                }
+
+                ShareLink(item: url) {
+                    Label("results.share", systemImage: "square.and.arrow.up")
+                }
+                .buttonStyle(PrimaryButtonStyle(height: 56))
+            }
+            .padding(20)
+            .background(Color.ground)
+            .navigationTitle(Text(verbatim: item.name))
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("preview.done") { dismiss() }
+                }
+            }
+        }
     }
 }

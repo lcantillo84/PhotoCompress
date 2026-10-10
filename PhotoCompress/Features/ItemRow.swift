@@ -26,8 +26,18 @@ struct ItemRow: View {
     let store: BatchStore
     var isCurrent = false
     var retry: (() -> Void)?
+    /// Set for saved photos in the results list: opens the compressed copy.
+    var open: (() -> Void)?
 
     var body: some View {
+        if let open {
+            Button(action: open) { content }.buttonStyle(.plain)
+        } else {
+            content
+        }
+    }
+
+    private var content: some View {
         HStack(spacing: 12) {
             ItemThumbnail(item: item, store: store)
             Group {
@@ -37,8 +47,13 @@ struct ItemRow: View {
             .lineLimit(1)
             Spacer(minLength: 8)
             status
+            if open != nil {
+                Image(systemName: "chevron.right").font(.footnote.weight(.semibold)).foregroundStyle(.tertiary)
+                    .accessibilityHidden(true)
+            }
         }
         .frame(minHeight: 58)
+        .contentShape(.rect)
     }
 
     @ViewBuilder private var status: some View {

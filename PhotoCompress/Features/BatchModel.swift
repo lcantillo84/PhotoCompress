@@ -170,7 +170,11 @@ final class BatchModel {
         do {
             let result = try CompressionEngine.compress(
                 sourceURL: store.inbox.appendingPathComponent(item.inboxFile), targetBytes: target, metadata: policy)
-            let file = "\(item.name)-\(item.id.uuidString.prefix(8)).jpg"
+            // "-compressed" in the name is how the copy is told apart from its original in Photos.
+            var file = "\(item.name)-compressed.jpg"
+            if FileManager.default.fileExists(atPath: store.outbox.appendingPathComponent(file).path) {
+                file = "\(item.name)-compressed-\(item.id.uuidString.prefix(4)).jpg"
+            }
             let output = store.outbox.appendingPathComponent(file)
             try result.data.write(to: output, options: .atomic)
             try await PhotoSaver.save(fileURL: output)

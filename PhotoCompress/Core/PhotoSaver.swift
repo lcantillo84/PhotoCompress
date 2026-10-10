@@ -12,7 +12,9 @@ enum PhotoSaver {
     /// Saves the file's bytes untouched, so the metadata the engine wrote is what Photos stores.
     static func save(fileURL: URL) async throws {
         try await PHPhotoLibrary.shared().performChanges {
-            PHAssetCreationRequest.forAsset().addResource(with: .photo, fileURL: fileURL, options: nil)
+            let options = PHAssetResourceCreationOptions()
+            options.originalFilename = fileURL.lastPathComponent
+            PHAssetCreationRequest.forAsset().addResource(with: .photo, fileURL: fileURL, options: options)
         }
     }
 }
