@@ -7,28 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0012A1116DDAC420DF6E8904 /* CompressHarnessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B88405B64ABB0172AEF47 /* CompressHarnessModel.swift */; };
 		0DE727CF8403E4C1E0C34210 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB032C60FF90EAE1A1AA414 /* Models.swift */; };
 		2E691C026E1403B117049F78 /* CompressionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C50C5CED629B25ACA396BB /* CompressionEngine.swift */; };
 		49CD5B18C08AE615234F50F6 /* PhotoCompressApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988ED94EB5337EB1273EF936 /* PhotoCompressApp.swift */; };
-		80FA2F112392F1223A0A04D1 /* CompressHarnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2142D27444B1239CE89FCAD /* CompressHarnessView.swift */; };
+		602EC0A0C5AC3A5677170AB9 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391C9C5A9BF133CCFE6D400B /* ComposeView.swift */; };
+		68D2D7C919A20ABE0E83B71E /* BatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7851D6B12C0EE44C1B30B582 /* BatchModel.swift */; };
+		81BB485E2373187328EE6D86 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122072B1E14B3B784AF34809 /* Theme.swift */; };
+		81F184D07769D54BEC262A52 /* BatchJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F763E399FF56AE67BDCDAA /* BatchJournal.swift */; };
+		874332C7FE0161896D30DEF9 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EC6494F85F6D99081CAF26ED /* InfoPlist.xcstrings */; };
 		8B0FE5656F536B9A31C85829 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A21DC1C771F809B8145A4 /* RootView.swift */; };
+		8E6A1FE53B5254D16D3F32D6 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0829F2C43611C24F2736D5 /* ResultsView.swift */; };
+		9400019EA22D920E18A274F9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A201EB819FD0401239B108 /* HomeView.swift */; };
+		A45B611BB82559E6D0410CD3 /* BatchProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7DCE01C5F20633D73C9D2 /* BatchProgressView.swift */; };
 		A76260C134111D1BF613301C /* MetadataPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A495D548C6CE02BBAD44F155 /* MetadataPolicy.swift */; };
 		B17E032E538A97235CDC496B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DB32B493B701964BB15B6662 /* PrivacyInfo.xcprivacy */; };
+		B49D4E2B76D7F2A769174C49 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068966CE2FEF50D5AFB4A87 /* ItemRow.swift */; };
+		B54F9EC52E4A0104EE95FA96 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83222B735966970072A9C3C0 /* Thumbnail.swift */; };
+		D201A128638D68236BED56FA /* PhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C0A0C54CA1EA4BFE691FA /* PhotoSaver.swift */; };
 		E5B2F4D117EB68FC08A0431D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 409F4785A5F052D5E023CC64 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		122072B1E14B3B784AF34809 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		2068966CE2FEF50D5AFB4A87 /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
+		2B3C0A0C54CA1EA4BFE691FA /* PhotoSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSaver.swift; sourceTree = "<group>"; };
+		2F0829F2C43611C24F2736D5 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		391C9C5A9BF133CCFE6D400B /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
 		409F4785A5F052D5E023CC64 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		77C50C5CED629B25ACA396BB /* CompressionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressionEngine.swift; sourceTree = "<group>"; };
+		7851D6B12C0EE44C1B30B582 /* BatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchModel.swift; sourceTree = "<group>"; };
+		83222B735966970072A9C3C0 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		87A201EB819FD0401239B108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		988ED94EB5337EB1273EF936 /* PhotoCompressApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCompressApp.swift; sourceTree = "<group>"; };
+		9AF7DCE01C5F20633D73C9D2 /* BatchProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchProgressView.swift; sourceTree = "<group>"; };
+		A1F763E399FF56AE67BDCDAA /* BatchJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchJournal.swift; sourceTree = "<group>"; };
 		A495D548C6CE02BBAD44F155 /* MetadataPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataPolicy.swift; sourceTree = "<group>"; };
 		AFB032C60FF90EAE1A1AA414 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C35A21DC1C771F809B8145A4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D3E4FCA3E71D120D154460D6 /* PhotoCompress.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PhotoCompress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB32B493B701964BB15B6662 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		EB8B88405B64ABB0172AEF47 /* CompressHarnessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressHarnessModel.swift; sourceTree = "<group>"; };
-		F2142D27444B1239CE89FCAD /* CompressHarnessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompressHarnessView.swift; sourceTree = "<group>"; };
+		EC6494F85F6D99081CAF26ED /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -51,6 +69,7 @@
 		65605AB895CF5D25583E5DB3 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				EC6494F85F6D99081CAF26ED /* InfoPlist.xcstrings */,
 				409F4785A5F052D5E023CC64 /* Localizable.xcstrings */,
 				988ED94EB5337EB1273EF936 /* PhotoCompressApp.swift */,
 				C35A21DC1C771F809B8145A4 /* RootView.swift */,
@@ -61,8 +80,7 @@
 		6647E2C1AB02E97F9E46FBDB /* Compose */ = {
 			isa = PBXGroup;
 			children = (
-				EB8B88405B64ABB0172AEF47 /* CompressHarnessModel.swift */,
-				F2142D27444B1239CE89FCAD /* CompressHarnessView.swift */,
+				391C9C5A9BF133CCFE6D400B /* ComposeView.swift */,
 			);
 			path = Compose;
 			sourceTree = "<group>";
@@ -78,10 +96,24 @@
 			path = PhotoCompress;
 			sourceTree = "<group>";
 		};
+		9BCE2D4FC8DD98AF90FE1366 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				9AF7DCE01C5F20633D73C9D2 /* BatchProgressView.swift */,
+				2F0829F2C43611C24F2736D5 /* ResultsView.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
 		A03775B9075C4ED35B2FA79E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7851D6B12C0EE44C1B30B582 /* BatchModel.swift */,
+				2068966CE2FEF50D5AFB4A87 /* ItemRow.swift */,
+				122072B1E14B3B784AF34809 /* Theme.swift */,
 				6647E2C1AB02E97F9E46FBDB /* Compose */,
+				E309B3559A8D74ACED14D298 /* Picker */,
+				9BCE2D4FC8DD98AF90FE1366 /* Results */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -89,11 +121,22 @@
 		BEDC0D341216D9CF521120D3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A1F763E399FF56AE67BDCDAA /* BatchJournal.swift */,
 				77C50C5CED629B25ACA396BB /* CompressionEngine.swift */,
 				A495D548C6CE02BBAD44F155 /* MetadataPolicy.swift */,
 				AFB032C60FF90EAE1A1AA414 /* Models.swift */,
+				2B3C0A0C54CA1EA4BFE691FA /* PhotoSaver.swift */,
+				83222B735966970072A9C3C0 /* Thumbnail.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E309B3559A8D74ACED14D298 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				87A201EB819FD0401239B108 /* HomeView.swift */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				874332C7FE0161896D30DEF9 /* InfoPlist.xcstrings in Resources */,
 				E5B2F4D117EB68FC08A0431D /* Localizable.xcstrings in Resources */,
 				B17E032E538A97235CDC496B /* PrivacyInfo.xcprivacy in Resources */,
 			);
@@ -168,13 +212,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0012A1116DDAC420DF6E8904 /* CompressHarnessModel.swift in Sources */,
-				80FA2F112392F1223A0A04D1 /* CompressHarnessView.swift in Sources */,
+				81F184D07769D54BEC262A52 /* BatchJournal.swift in Sources */,
+				68D2D7C919A20ABE0E83B71E /* BatchModel.swift in Sources */,
+				A45B611BB82559E6D0410CD3 /* BatchProgressView.swift in Sources */,
+				602EC0A0C5AC3A5677170AB9 /* ComposeView.swift in Sources */,
 				2E691C026E1403B117049F78 /* CompressionEngine.swift in Sources */,
+				9400019EA22D920E18A274F9 /* HomeView.swift in Sources */,
+				B49D4E2B76D7F2A769174C49 /* ItemRow.swift in Sources */,
 				A76260C134111D1BF613301C /* MetadataPolicy.swift in Sources */,
 				0DE727CF8403E4C1E0C34210 /* Models.swift in Sources */,
 				49CD5B18C08AE615234F50F6 /* PhotoCompressApp.swift in Sources */,
+				D201A128638D68236BED56FA /* PhotoSaver.swift in Sources */,
+				8E6A1FE53B5254D16D3F32D6 /* ResultsView.swift in Sources */,
 				8B0FE5656F536B9A31C85829 /* RootView.swift in Sources */,
+				81BB485E2373187328EE6D86 /* Theme.swift in Sources */,
+				B54F9EC52E4A0104EE95FA96 /* Thumbnail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +240,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Compress";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Photo Compress saves the compressed copies to your library. It never changes or deletes your originals.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,6 +387,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Photo Compress";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Photo Compress saves the compressed copies to your library. It never changes or deletes your originals.";
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (

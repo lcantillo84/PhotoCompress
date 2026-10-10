@@ -24,6 +24,7 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_CFBundleDisplayName: Photo Compress
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: Photo Compress saves the compressed copies to your library. It never changes or deletes your originals.
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
         TARGETED_DEVICE_FAMILY: "1"
         LOCALIZATION_PREFERS_STRING_CATALOGS: YES

@@ -1,9 +1,21 @@
 import SwiftUI
 
-/// Phase 0 shell: hosts the engine test harness. Replaced by the Picker -> Compose -> Results flow.
 struct RootView: View {
+    @State private var model = BatchModel()
+
     var body: some View {
-        CompressHarnessView()
+        Group {
+            switch model.phase {
+            case .home: HomeView(model: model)
+            case .compose: ComposeView(model: model)
+            case .running: BatchProgressView(model: model)
+            case .results: ResultsView(model: model)
+            }
+        }
+        .animation(.default, value: model.phase)
+        #if DEBUG
+        .task { model.loadDemoIfRequested() }
+        #endif
     }
 }
 

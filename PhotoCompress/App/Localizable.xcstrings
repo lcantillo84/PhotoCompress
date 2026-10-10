@@ -2,7 +2,7 @@
   "sourceLanguage": "en",
   "strings": {
     "app.title": {
-      "comment": "App name shown on the placeholder root screen.",
+      "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
@@ -18,308 +18,839 @@
         }
       }
     },
-    "harness.pick": {
+    "home.headline": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Choose Photo"
+            "value": "Make photos fit any upload limit"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Elegir foto"
+            "value": "Tus fotos, del tamaño que te piden"
           }
         }
       }
     },
-    "harness.target": {
+    "home.subtitle": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Target size (KB)"
+            "value": "Tell us the size you need. We hit it, and keep the date, camera and location."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tamaño objetivo (KB)"
+            "value": "Dinos el tamaño que necesitas y lo logramos, sin perder la fecha, la cámara ni la ubicación."
           }
         }
       }
     },
-    "harness.compress": {
+    "home.choose": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Compress"
+            "value": "Choose Photos"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Comprimir"
+            "value": "Elegir fotos"
           }
         }
       }
     },
-    "harness.failed": {
+    "home.preparing %lld %lld": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Couldn't compress this photo."
+            "value": "Preparing %1$lld of %2$lld"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "No se pudo comprimir esta foto."
+            "value": "Preparando %1$lld de %2$lld"
           }
         }
       }
     },
-    "harness.result": {
+    "home.promise.originals": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Result"
+            "value": "Originals are never changed or deleted"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Resultado"
+            "value": "Tus originales nunca se cambian ni se borran"
           }
         }
       }
     },
-    "harness.original": {
+    "home.promise.limits": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Original size"
+            "value": "No photo limit, no ads, no subscription"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tamaño original"
+            "value": "Sin límite de fotos, sin anuncios, sin suscripción"
           }
         }
       }
     },
-    "harness.final": {
+    "home.promise.private": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Final size"
+            "value": "Nothing leaves your phone"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tamaño final"
+            "value": "Nada sale de tu teléfono"
           }
         }
       }
     },
-    "harness.quality": {
+    "home.unfinished.title": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Quality"
+            "value": "Unfinished batch"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Calidad"
+            "value": "Lote sin terminar"
           }
         }
       }
     },
-    "harness.scale": {
+    "home.unfinished.detail %lld %lld": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Scale"
+            "value": "%1$lld saved, %2$lld left. Nothing was lost."
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Escala"
+            "value": "%1$lld guardadas, faltan %2$lld. No se perdió nada."
           }
         }
       }
     },
-    "harness.dimensions": {
+    "home.resume": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dimensions"
+            "value": "Resume"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dimensiones"
+            "value": "Continuar"
           }
         }
       }
     },
-    "harness.iterations": {
+    "home.discard": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Encodes"
+            "value": "Discard"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Codificaciones"
+            "value": "Descartar"
           }
         }
       }
     },
-    "harness.metadata": {
+    "compose.back": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Metadata kept"
+            "value": "Back"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Metadatos conservados"
+            "value": "Atrás"
           }
         }
       }
     },
-    "harness.captureDate": {
+    "compose.addMore": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Capture date"
+            "value": "Add more"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Fecha de captura"
+            "value": "Agregar más"
           }
         }
       }
     },
-    "harness.cameraModel": {
+    "compose.count %lld": {
       "extractionState": "manual",
       "localizations": {
         "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Camera model"
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld photo"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld photos"
+                }
+              }
+            }
           }
         },
         "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modelo de cámara"
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld foto"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld fotos"
+                }
+              }
+            }
           }
         }
       }
     },
-    "harness.gps": {
+    "compose.total %@": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Location (GPS)"
+            "value": "%@ total"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ubicación (GPS)"
+            "value": "%@ en total"
           }
         }
       }
     },
-    "harness.yes": {
+    "compose.under": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Yes"
+            "value": "Make each photo under"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Sí"
+            "value": "Cada foto debe pesar menos de"
           }
         }
       }
     },
-    "harness.no": {
+    "compose.custom": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No"
+            "value": "Custom"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "No"
+            "value": "Otro"
           }
         }
       }
     },
-    "harness.none": {
+    "compose.custom.placeholder": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "None"
+            "value": "Size"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "Ninguno"
+            "value": "Tamaño"
+          }
+        }
+      }
+    },
+    "compose.custom.unit": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unit"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unidad"
+          }
+        }
+      }
+    },
+    "compose.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 MB fits most web forms. Discord allows 10 MB, email 25 MB."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 MB sirve para la mayoría de los formularios web. Discord acepta 10 MB y el correo, 25 MB."
+          }
+        }
+      }
+    },
+    "compose.keepInfo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep photo info"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Conservar datos de la foto"
+          }
+        }
+      }
+    },
+    "compose.keepInfo.detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date, camera and location"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fecha, cámara y ubicación"
+          }
+        }
+      }
+    },
+    "compose.copies": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saved as new copies. Your originals stay as they are."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Se guardan como copias nuevas. Tus originales quedan igual."
+          }
+        }
+      }
+    },
+    "compose.compress %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Compress %lld photo"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Compress %lld photos"
+                }
+              }
+            }
+          }
+        },
+        "es": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Comprimir %lld foto"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Comprimir %lld fotos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "access.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow saving to Photos"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permite guardar en Fotos"
+          }
+        }
+      }
+    },
+    "access.message": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo Compress needs permission to add the compressed copies to your library. It can't see, change or delete your other photos."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimir Fotos necesita permiso para agregar las copias comprimidas a tu biblioteca. No puede ver, cambiar ni borrar tus otras fotos."
+          }
+        }
+      }
+    },
+    "access.settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Settings"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Configuración"
+          }
+        }
+      }
+    },
+    "access.cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not now"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ahora no"
+          }
+        }
+      }
+    },
+    "progress.title %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compressing to under %@"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimiendo a menos de %@"
+          }
+        }
+      }
+    },
+    "progress.count %lld %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld of %2$lld"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld de %2$lld"
+          }
+        }
+      }
+    },
+    "progress.safe": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Each photo is saved as soon as it finishes. If the app closes, you can pick up where it stopped."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cada foto se guarda apenas termina. Si la app se cierra, puedes continuar donde quedó."
+          }
+        }
+      }
+    },
+    "progress.cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
+          }
+        }
+      }
+    },
+    "row.saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saved"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardada"
+          }
+        }
+      }
+    },
+    "row.fits %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, already fits"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, ya cabe"
+          }
+        }
+      }
+    },
+    "row.retry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't compress. Retry"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo comprimir. Reintentar"
+          }
+        }
+      }
+    },
+    "row.failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't read"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se pudo leer"
+          }
+        }
+      }
+    },
+    "row.unreadable": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unreadable photo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Foto ilegible"
+          }
+        }
+      }
+    },
+    "row.working": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Working…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procesando…"
+          }
+        }
+      }
+    },
+    "row.waiting": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waiting"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En espera"
+          }
+        }
+      }
+    },
+    "results.saved %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld photo saved"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld photos saved"
+                }
+              }
+            }
+          }
+        },
+        "es": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld foto guardada"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld fotos guardadas"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "results.where.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Where they are"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dónde están"
+          }
+        }
+      }
+    },
+    "results.where.detail": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New copies are in Photos, under Recents. Your originals were not changed."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las copias nuevas están en Fotos, en Recientes. Tus originales no se tocaron."
+          }
+        }
+      }
+    },
+    "results.openPhotos": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Photos"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Fotos"
+          }
+        }
+      }
+    },
+    "results.share": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartir"
+          }
+        }
+      }
+    },
+    "results.more": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compress more"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprimir más"
           }
         }
       }

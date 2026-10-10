@@ -20,13 +20,22 @@ top-ranked apps complained about its absence:
 3. **Never overwrite or delete originals.** Always save as a new asset. The app writes; Photos handles deletion.
 4. **SwiftUI with `@Observable`.** No Combine, no architecture framework, no DI container.
 
+## Market (researched Oct 2026)
+
+Target-size compression is no longer unique: Size Limit, Tinyfy and Limitfit launched Jul-Aug 2026.
+Our edge is unlimited batches, crash-safe resume, metadata kept by default, and a result screen
+that says where the photos went. Leave out: ads, rating prompts, video, cropping, print/DPI sizing.
+
 ## Layout
 
 - `PhotoCompress/App` entry point + root view, `Localizable.xcstrings`
-- `PhotoCompress/Features/{Picker,Compose,Results}` UI (not built yet)
+- `PhotoCompress/Features` UI: `BatchModel` drives Home -> Compose -> Progress -> Results
+- `Core/BatchJournal.swift` per-photo journal for resume; `Core/PhotoSaver.swift` add-only save (not in the SwiftPM target)
 - `PhotoCompress/Core` engine; no UIKit imports, so it is testable from the CLI
 - `PhotoCompress/PrivacyInfo.xcprivacy` privacy manifest; keep in sync with any new required-reason API use
-- `Tests/PhotoCompressCoreTests` engine tests; run `swift test`
+- `Tests/PhotoCompressCoreTests` engine + journal tests; run `swift test`. `Tests/Fixtures` holds real photos and is git-ignored
+- `project.yml` is the source of the Xcode project; run `xcodegen generate` after adding files
+- Debug builds accept `-demo compose|running|results|unfinished` for screenshots
 
 ## Engine rules (`Core/CompressionEngine.swift`)
 

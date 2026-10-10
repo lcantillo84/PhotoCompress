@@ -9,7 +9,7 @@ let package = Package(
     platforms: [.iOS(.v17), .macOS(.v14)],
     products: [.library(name: "PhotoCompressCore", targets: ["PhotoCompressCore"])],
     targets: [
-        .target(name: "PhotoCompressCore", path: "PhotoCompress/Core"),
+        .target(name: "PhotoCompressCore", path: "PhotoCompress/Core", exclude: ["PhotoSaver.swift"]),
         .testTarget(
             name: "PhotoCompressCoreTests",
             dependencies: ["PhotoCompressCore"],
