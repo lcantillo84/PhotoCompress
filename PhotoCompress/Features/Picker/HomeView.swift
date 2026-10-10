@@ -22,7 +22,6 @@ struct HomeView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text("app.title").font(.subheadline.weight(.semibold)).foregroundStyle(.secondary)
             VStack(alignment: .leading, spacing: 10) {
                 Text("home.headline").font(.largeTitle.weight(.heavy))
                 Text("home.subtitle").font(.body).foregroundStyle(.secondary)
@@ -50,6 +49,7 @@ struct HomeView: View {
         .padding(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(Color.ground)
+        .navigationTitle("app.title")
     }
 
     private func unfinishedCard(_ batch: BatchJournal) -> some View {

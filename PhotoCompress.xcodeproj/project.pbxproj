@@ -24,6 +24,7 @@
 		B49D4E2B76D7F2A769174C49 /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2068966CE2FEF50D5AFB4A87 /* ItemRow.swift */; };
 		B54F9EC52E4A0104EE95FA96 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83222B735966970072A9C3C0 /* Thumbnail.swift */; };
 		D201A128638D68236BED56FA /* PhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C0A0C54CA1EA4BFE691FA /* PhotoSaver.swift */; };
+		D5D66FB52427B4DF947FB538 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B501FFAA162FFD171FBA9 /* SettingsView.swift */; };
 		E5B2F4D117EB68FC08A0431D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 409F4785A5F052D5E023CC64 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		A1F763E399FF56AE67BDCDAA /* BatchJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchJournal.swift; sourceTree = "<group>"; };
 		A495D548C6CE02BBAD44F155 /* MetadataPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataPolicy.swift; sourceTree = "<group>"; };
 		AFB032C60FF90EAE1A1AA414 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		BE7B501FFAA162FFD171FBA9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C35A21DC1C771F809B8145A4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		D3E4FCA3E71D120D154460D6 /* PhotoCompress.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PhotoCompress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB32B493B701964BB15B6662 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				7851D6B12C0EE44C1B30B582 /* BatchModel.swift */,
 				2068966CE2FEF50D5AFB4A87 /* ItemRow.swift */,
+				BE7B501FFAA162FFD171FBA9 /* SettingsView.swift */,
 				122072B1E14B3B784AF34809 /* Theme.swift */,
 				6647E2C1AB02E97F9E46FBDB /* Compose */,
 				E309B3559A8D74ACED14D298 /* Picker */,
@@ -225,6 +228,7 @@
 				D201A128638D68236BED56FA /* PhotoSaver.swift in Sources */,
 				8E6A1FE53B5254D16D3F32D6 /* ResultsView.swift in Sources */,
 				8B0FE5656F536B9A31C85829 /* RootView.swift in Sources */,
+				D5D66FB52427B4DF947FB538 /* SettingsView.swift in Sources */,
 				81BB485E2373187328EE6D86 /* Theme.swift in Sources */,
 				B54F9EC52E4A0104EE95FA96 /* Thumbnail.swift in Sources */,
 			);

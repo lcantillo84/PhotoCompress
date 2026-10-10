@@ -40,7 +40,9 @@ final class BatchModel {
     var selectedPreset: Int? = SizePreset.default
     var customAmount: Double?
     var customUnit = SizeUnit.mb
-    var keepMetadata = true
+    var keepMetadata = UserDefaults.standard.object(forKey: "keepMetadata") as? Bool ?? true {
+        didSet { UserDefaults.standard.set(keepMetadata, forKey: "keepMetadata") }
+    }
     var accessDenied = false
 
     let store: BatchStore

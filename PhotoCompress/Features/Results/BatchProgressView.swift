@@ -51,6 +51,7 @@ struct BatchProgressView: View {
             }
             .padding(20)
             .background(Color.ground)
+            .navigationTitle("progress.nav")
         }
     }
 }

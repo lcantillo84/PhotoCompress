@@ -7,8 +7,6 @@ struct ResultsView: View {
         if let batch = model.journal {
             let saved = batch.saved
             VStack(alignment: .leading, spacing: 18) {
-                Button { model.discard() } label: { Label("nav.home", systemImage: "chevron.left") }
-                    .font(.body).tint(Color.brandText).frame(minHeight: 44)
                 VStack(alignment: .leading, spacing: 8) {
                     Image(systemName: "checkmark")
                         .font(.title2.weight(.bold)).foregroundStyle(.white)
@@ -40,9 +38,15 @@ struct ResultsView: View {
                 Button("results.more") { model.discard() }
                     .buttonStyle(SecondaryButtonStyle(tint: .brandText))
             }
-            .padding(.horizontal, 20).padding(.bottom, 20)
+            .padding(20)
             .background(Color.ground)
             .swipeBack { model.discard() }
+            .navigationTitle("results.nav")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { model.discard() } label: { Label("nav.home", systemImage: "chevron.left").labelStyle(.titleAndIcon) }
+                }
+            }
         }
     }
 

@@ -9,23 +9,25 @@ struct ComposeView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                HStack {
-                    Button { model.discard() } label: { Label("compose.back", systemImage: "chevron.left") }
-                    Spacer()
-                    PhotoPickerButton(model: model) { Text("compose.addMore") }
-                }
-                .font(.body).tint(Color.brandText).frame(minHeight: 44)
-
                 summary
                 sizePicker
                 metadataToggle
             }
             .padding(.horizontal, 20)
-            .padding(.bottom, 12)
+            .padding(.vertical, 12)
         }
         .scrollDismissesKeyboard(.interactively)
         .background(Color.ground)
         .swipeBack { model.discard() }
+        .navigationTitle("compose.title")
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button { model.discard() } label: { Label("compose.back", systemImage: "chevron.left").labelStyle(.titleAndIcon) }
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                PhotoPickerButton(model: model) { Text("compose.addMore") }
+            }
+        }
         .safeAreaInset(edge: .bottom) {
             VStack(spacing: 10) {
                 Text("compose.copies").font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
