@@ -61,3 +61,13 @@ extension Int {
     /// Localized file size, e.g. "1.9 MB".
     var fileSize: String { Int64(self).formatted(.byteCount(style: .file)) }
 }
+
+extension View {
+    /// Swipe right from the left edge to go back, like a navigation stack.
+    func swipeBack(_ action: @escaping () -> Void) -> some View {
+        simultaneousGesture(
+            DragGesture(minimumDistance: 24).onEnded { drag in
+                if drag.startLocation.x < 36, drag.translation.width > 80, abs(drag.translation.height) < 80 { action() }
+            })
+    }
+}

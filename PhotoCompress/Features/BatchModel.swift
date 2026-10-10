@@ -23,11 +23,15 @@ struct PickedPhoto: Transferable {
 /// as a new asset, and journaling progress so an interrupted batch can be resumed.
 @MainActor @Observable
 final class BatchModel {
-    enum Phase {
+    enum Phase: Int {
         case home, compose, running, results
     }
 
     private(set) var phase = Phase.home
+    /// Whether the last screen change went deeper into the flow; drives the slide direction.
+    private(set) var movedForward = true
+    /// True between tapping Cancel and the photo in progress finishing.
+    private(set) var isStopping = false
     private(set) var journal: BatchJournal?
     private(set) var importProgress: (done: Int, total: Int)?
     private(set) var currentID: UUID?
@@ -85,7 +89,7 @@ final class BatchModel {
             importProgress = nil
             journal = batch
             persist()
-            phase = .compose
+            go(to: .compose)
         }
     }
 
@@ -138,7 +142,7 @@ final class BatchModel {
             }
             journal?.started = true
             persist()
-            phase = .running
+            go(to: .running)
 
             for item in batch.items where item.status == .pending {
                 if Task.isCancelled { break }
@@ -147,7 +151,7 @@ final class BatchModel {
                 apply(outcome, to: item.id)
             }
             currentID = nil
-            phase = journal?.pending.isEmpty == true ? .results : .home
+            go(to: journal?.pending.isEmpty == true ? .results : .home)
         }
     }
 
@@ -197,7 +201,14 @@ final class BatchModel {
 
     /// Stops after the photo in progress. What's done stays saved; the rest can be resumed.
     func cancel() {
+        isStopping = true
         work?.cancel()
+    }
+
+    private func go(to next: Phase) {
+        movedForward = next.rawValue > phase.rawValue
+        isStopping = false
+        phase = next
     }
 
     /// Drops the batch and the app's working copies. Photos already saved to the library stay there.
@@ -207,7 +218,7 @@ final class BatchModel {
         journal = nil
         importProgress = nil
         currentID = nil
-        phase = .home
+        go(to: .home)
     }
 
     private func persist() {

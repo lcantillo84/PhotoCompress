@@ -45,7 +45,9 @@ struct BatchProgressView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(Color.brandFill.opacity(0.14), in: .rect(cornerRadius: 16))
 
-                Button("progress.cancel") { model.cancel() }.buttonStyle(SecondaryButtonStyle())
+                Button(model.isStopping ? LocalizedStringKey("progress.stopping") : LocalizedStringKey("progress.cancel")) { model.cancel() }
+                    .buttonStyle(SecondaryButtonStyle())
+                    .disabled(model.isStopping)
             }
             .padding(20)
             .background(Color.ground)

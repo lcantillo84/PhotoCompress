@@ -25,6 +25,7 @@ struct ComposeView: View {
         }
         .scrollDismissesKeyboard(.interactively)
         .background(Color.ground)
+        .swipeBack { model.discard() }
         .safeAreaInset(edge: .bottom) {
             VStack(spacing: 10) {
                 Text("compose.copies").font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
