@@ -25,3 +25,6 @@ Packages/
 
 # Real personal photos used as test fixtures (GPS, people). Never commit.
 Tests/Fixtures/
+
+# Local AI assistant instructions
+CLAUDE.md
