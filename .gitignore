@@ -1,7 +1,27 @@
+# Xcode
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+DerivedData/
+build/
+*.xcresult
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Swift Package Manager
 .build/
 .swiftpm/
-xcuserdata/
-DerivedData/
+Packages/
+
+# macOS
 .DS_Store
-# Real personal photos (GPS, people). Never commit.
+
+# Secrets and local config
+.env
+*.p8
+*.p12
+*.mobileprovision
+
+# Real personal photos used as test fixtures (GPS, people). Never commit.
 Tests/Fixtures/
